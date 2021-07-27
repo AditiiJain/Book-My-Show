@@ -1,10 +1,13 @@
+//HOC
+import DefaultHOC from ".\HOC\Default.HOC"
 
+//Components
 
 
 function App() {
   return (
     <div className="App">
-     <h1 className="text-xs text-blue-500">aditi</h1>
+     <DefaultHOC path="/" exact component={}/>
     </div>
   );
 }
