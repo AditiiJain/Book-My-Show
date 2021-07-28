@@ -1,14 +1,14 @@
 //HOC
-import DefaultHOC from ".\HOC\Default.HOC"
+import DefaultHOC from "./HOC/Default.HOC"
 
 //Components
-
+import Temp from "./components/temp";
 
 function App() {
   return (
-    <div className="App">
-     <DefaultHOC path="/" exact component={}/>
-    </div>
+    <>
+     <DefaultHOC path="/" exact component={Temp}/>
+    </>
   );
 }
 
