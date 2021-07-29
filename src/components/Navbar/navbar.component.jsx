@@ -67,7 +67,7 @@ const NavLg = () => {
             <img
               className="w-full h-full"
               src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-              alt="llogo"
+              alt="logo"
             />
           </div>
           <div className="w-full flex bg-white items-center gap-2 px-3 py-1  rounded-sm">
@@ -98,7 +98,7 @@ const NavLg = () => {
 const Navbar = () => {
   return (
     <>
-      <nav className="bg-navbar-900 ">
+      <nav className="bg-navbar-900">
         <div className="md:hidden">
           {/*mobile screen*/}
           <NavSm />
@@ -107,7 +107,7 @@ const Navbar = () => {
           {/*medium tablet screen*/}
           <NavMd />
         </div>
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex ">
           {/*large screen*/}
           <NavLg />
         </div>

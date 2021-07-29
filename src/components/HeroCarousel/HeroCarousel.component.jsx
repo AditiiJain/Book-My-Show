@@ -7,6 +7,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const HeroCarousel = () => {
   const settings = {
+    arrows: true,
+    centerMode: true,
+    centerPadding: "250px",
     dots: true,
     infinite: true,
     speed: 500,
@@ -22,11 +25,15 @@ const HeroCarousel = () => {
   ];
   return (
     <>
-      <HeroSlider {...settings}>{images.map((img) => {
-          <div className="w-20 h-80">
-              <img src={img} alt="carousel image" className="w-full h-full"/>
-          </div>
-      })}</HeroSlider>
+      <HeroSlider {...settings}>
+        {images.map((image) => {
+          return (
+            <div className="w-20 h-80">
+              <img src={image} alt="" className="w-full h-full" />
+            </div>
+          );
+        })}
+      </HeroSlider>
     </>
   );
 };
