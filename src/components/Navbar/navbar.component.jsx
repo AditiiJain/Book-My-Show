@@ -95,6 +95,64 @@ const NavLg = () => {
   );
 };
 
+// const NavBar2SM = () => {
+//   return (
+//     <>
+//       <div>
+//         <div>
+//           <img
+//             src=""
+//             alt="nav pic"
+//           />
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+const NavBar2LG = () => {
+  return (
+    <>
+      <div className="container mx-auto px-15 py-1 flex items-center justify-between bg-gray-800">
+        <div className="text-white">
+          <a href="#" className="px-2">
+            Movies
+          </a>
+          <a href="#" className="px-2">
+            Stream
+          </a>
+          <a href="#" className="px-2">
+            Events
+          </a>
+          <a href="#" className="px-2">
+            Plays
+          </a>
+          <a href="#" className="px-2">
+            Activities
+          </a>
+          <a href="#" className="px-2">
+            Buzz
+          </a>
+        </div>
+        <div className="text-white">
+          <a href="#" className="px-2">
+            ListYourShow
+          </a>
+          <a href="#" className="px-2">
+            Corporates
+          </a>
+          <a href="#" className="px-2">
+            Offers
+          </a>
+          <a href="#" className="px-2">
+            Gift Cards
+          </a>
+        </div>
+      </div>
+    </>
+  );
+};
+
 const Navbar = () => {
   return (
     <>
@@ -102,14 +160,16 @@ const Navbar = () => {
         <div className="md:hidden">
           {/*mobile screen*/}
           <NavSm />
+          {/* <NavBar2SM/> */}
         </div>
         <div className="hidden md:flex lg:hidden">
           {/*medium tablet screen*/}
           <NavMd />
         </div>
-        <div className="hidden lg:flex ">
+        <div className="hidden lg:flex lg:flex-col">
           {/*large screen*/}
           <NavLg />
+          <NavBar2LG/>
         </div>
       </nav>
     </>
