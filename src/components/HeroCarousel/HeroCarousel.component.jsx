@@ -2,15 +2,12 @@ import React from "react";
 import HeroSlider from "react-slick";
 import {NextArrow,PrevArrow} from "./Arrows.components";
 
-// Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./HeroCarousel.css"
 
 const HeroCarousel = () => {
   const settingsLG = {
     arrows: true,
-    autoplay: true,
+    autoplay:true,
     centerMode: true,
     centerPadding: "370px",
     dots: true,
@@ -45,7 +42,7 @@ const HeroCarousel = () => {
         <HeroSlider {...settings}>
           {images.map((image) => {
             return (
-              <div className="w-full h-56 md:h-72 py-3">
+              <div className="w-full h-56 md:h-72 sm:h-64 pb-3">
                 <img src={image} alt="" className="w-full h-full" />
               </div>
             );

@@ -4,9 +4,40 @@
   }
   
   .slick-dots li button:before {
-    width: 15px;
-    height: 15px;
+    width: 11px !important;
+    height:11px !important;
     background-color: #fff;
     border-radius: 50%;
     color: #fff !important;
   }
+
+  .slick-prev:before ,.slick-next:before{
+    font-size: 23px;
+    content: '←';
+    text-align: center;
+    position: absolute;
+    top: 23px;
+    left: 20px;
+}
+
+  /* .slick-prev:before{ */
+    /* background-color: blue !important; */
+    /* width: 46px;
+    height: 46px;
+    content: '' !important;
+    position: absolute;
+    top: -11px;
+    left: -31px;
+    background-image: url('http://lorempixel.com/50/50');
+    } */
+    
+    /* .slick-next:before{ */
+    /* background-color: blue !important; */
+    /* width: 46px;
+    height: 46px;
+    content: '' !important;
+    position: absolute;
+    top: -11px;
+    left: 0px;
+    background-image: url('http://lorempixel.com/50/50');
+    } */

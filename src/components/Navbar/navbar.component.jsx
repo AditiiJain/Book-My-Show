@@ -61,7 +61,7 @@ const NavMd = () => {
 const NavLg = () => {
   return (
     <>
-      <div className="container mx-auto px-15 py-2 flex items-center justify-between">
+      <div className="container mx-auto px-16 py-2 flex items-center justify-between">
         <div className="flex items-center w-1/2 gap-4">
           <div className="w-12 h-12">
             <img
@@ -95,68 +95,62 @@ const NavLg = () => {
   );
 };
 
-// const NavBar2SM = () => {
-//   return (
-//     <>
-//       <div>
-//         <div>
-//           <img
-//             src=""
-//             alt="nav pic"
-//           />
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-const NavBar2LG = () => {
+const NavXl = () =>{
   return (
     <>
-      <div className="container mx-auto px-15 py-1 flex items-center justify-between bg-gray-800">
-        <div className="text-white">
-          <a href="#" className="px-2">
-            Movies
-          </a>
-          <a href="#" className="px-2">
-            Stream
-          </a>
-          <a href="#" className="px-2">
-            Events
-          </a>
-          <a href="#" className="px-2">
-            Plays
-          </a>
-          <a href="#" className="px-2">
-            Activities
-          </a>
-          <a href="#" className="px-2">
-            Buzz
-          </a>
+      <div className="container mx-auto px-32 py-2 flex items-center justify-between">
+        <div className="flex items-center w-1/2 gap-4">
+          <div className="w-12 h-12">
+            <img
+              className="w-full h-full"
+              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+              alt="logo"
+            />
+          </div>
+          <div className="w-full flex bg-white items-center gap-2 px-3 py-1  rounded-sm">
+            <BiSearch className="w-5 h-5 text-gray-500" />
+            <input
+              type="search"
+              className="placeholder-gray-400 w-full bg-transparent focus:outline-none border-none"
+              placeholder="Search for Movies, Events, Plays, Sports and Activities"
+            />
+          </div>
         </div>
-        <div className="text-white">
-          <a href="#" className="px-2">
-            ListYourShow
-          </a>
-          <a href="#" className="px-2">
-            Corporates
-          </a>
-          <a href="#" className="px-2">
-            Offers
-          </a>
-          <a href="#" className="px-2">
-            Gift Cards
-          </a>
+        <div className="flex gap-7 items-center">
+          <div className="flex items-center text-sm text-gray-300">
+            Delhi <IoMdArrowDropdown className="text-white" />
+          </div>
+          <button className="bg-navbar-800 text-xs text-white rounded-md px-4 py-1">
+            Sign in
+          </button>
+          <div className="w-8 h-8">
+            <IoIosMenu className="text-white w-full h-full" />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+const NavBar2SM = () => {
+  return (
+    <>
+      <div>
+        <div>
+          <img
+            src=""
+            alt="nav pic"
+          />
         </div>
       </div>
     </>
   );
 };
 
+
 const Navbar = () => {
   return (
     <>
-      <nav className="bg-navbar-900">
+      <nav className="bg-navbar-900 overflow-x-hidden">
         <div className="md:hidden">
           {/*mobile screen*/}
           <NavSm />
@@ -166,10 +160,12 @@ const Navbar = () => {
           {/*medium tablet screen*/}
           <NavMd />
         </div>
-        <div className="hidden lg:flex lg:flex-col">
+        <div className="hidden lg:flex lg:flex-col 2xl:hidden">
           {/*large screen*/}
           <NavLg />
-          <NavBar2LG/>
+        </div>
+        <div className="hidden 2xl:flex ">
+          <NavXl/>
         </div>
       </nav>
     </>
