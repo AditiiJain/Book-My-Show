@@ -73,13 +73,6 @@ const EntertainmentCardSlider = () => {
           initialSlide: 1,
         },
       },
-      // {
-      //   breakpoints: 639,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     slidesToScroll: 1,
-      //   },
-      // },
     ],
   };
   return (

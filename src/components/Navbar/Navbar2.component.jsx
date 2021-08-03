@@ -117,7 +117,7 @@ const Nav2Lg = () => {
 const NavBar2 = () => {
   return (
     <>
-      <nav className="bg-white lg:bg-gray-800 ">
+      <nav className="bg-white lg:bg-gray-800 overflow-x-auto">
         <div className="md:hidden ">
           {/*mobile screen*/}
           <Nav2Sm />

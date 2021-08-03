@@ -2,6 +2,7 @@ import React from "react";
 
 //components
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.component";
+import Premiere from "../components/Premiere/Premiere.component";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
         </h2>
         <p className="text-gray-500 text-sm pb-4 md:hidden">Step out or stay in, interesting experiences for everyone.</p>
         <EntertainmentCardSlider />
+        <Premiere/>
       </div>
     </>
   );

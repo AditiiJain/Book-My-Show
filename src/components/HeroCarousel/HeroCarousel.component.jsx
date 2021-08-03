@@ -45,7 +45,7 @@ const HeroCarousel = () => {
   return (
     <>
       <div className="lg:hidden">
-        <HeroSlider {...settings}>
+        <HeroSlider className=" heroCarousel" {...settings}>
           {images.map((image) => {
             return (
               <div className="w-full h-56 md:h-72 sm:h-64 pb-3">
@@ -56,7 +56,7 @@ const HeroCarousel = () => {
         </HeroSlider>
       </div>
       <div className="hidden lg:block">
-        <HeroSlider {...settingsLG}>
+        <HeroSlider   className=" heroCarousel" {...settingsLG}>
           {images.map((image) => {
             return (
               <div className="w-full h-96 px-2 py-3">             
