@@ -202,11 +202,11 @@ const NavBar2 = () => {
   return (
     <>
       <nav className="bg-gray-800 ">
-        <div className="md:hidden">
+        <div className="md:hidden overflow-x-scroll">
           {/*mobile screen*/}
           <Nav2Sm />
         </div>
-        <div className="hidden md:flex lg:hidden">
+        <div className="hidden md:flex lg:hidden overflow-x-scroll">
           {/*medium tablet screen*/}
           <Nav2Md />
         </div>

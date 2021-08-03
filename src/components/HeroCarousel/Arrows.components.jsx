@@ -1,5 +1,4 @@
 import React from "react";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 export const NextArrow = (props) => {
   return (
@@ -15,7 +14,6 @@ export const NextArrow = (props) => {
         }}
         onClick={props.onClick}
       >
-        {/* <BsChevronLeft /> */}
       </div>
     </>
   );

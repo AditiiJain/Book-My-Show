@@ -6,9 +6,7 @@ import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCa
 const HomePage = () => {
   return (
     <>
-      <div className="container mx-auto px-4">
-        <EntertainmentCardSlider />
-      </div>
+      <EntertainmentCardSlider />
     </>
   );
 };
