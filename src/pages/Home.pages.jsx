@@ -6,7 +6,7 @@ import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCa
 const HomePage = () => {
   return (
     <>
-      <div className="container mx-auto px-3 md:px-0 lg:px-4">
+      <div className="md:container md:mx-auto px-3 md:px-0 lg:px-4">
         <h2 className="font-bold text-gray-800 md:text-2xl md:p-6 text-xl pt-4">
           The Best Of Entertainment{" "}
         </h2>

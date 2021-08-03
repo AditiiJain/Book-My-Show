@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+// import {BsChevronLeft,BsChevronRight} from "react-icons/bs"
 
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -43,6 +44,8 @@ const EntertainmentCardSlider = () => {
     speed: 500,
     rows: 1,
     slidesPerRow: 2,
+    // nextArrow:<BsChevronRight/>,
+    // prevArrow:<BsChevronLeft/>,
   };
 
   const settingsLG = {
@@ -51,7 +54,8 @@ const EntertainmentCardSlider = () => {
     slidesToShow: 5,
     slidesToScroll: 5,
     initialSlide: 0,
-
+    // nextArrow:<BsChevronRight/>,
+    // prevArrow:<BsChevronLeft/>,
     responsive: [
       {
         breakpoints: 1024,
