@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 const EntertainmentCard = (props) => {
   return (
     <>
-      <div className="w-full h-30 px-4">
+      <div className="w-full h-30 px-4 md:h-46 sm:h-50 sm:px-2">
         <img
           src={props.src}
           className="w-full h-full rounded-xl"
@@ -53,7 +53,7 @@ const EntertainmentCardSlider = () => {
       {
         breakpoints: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
           initialSlide: 1,
         },
@@ -69,7 +69,7 @@ const EntertainmentCardSlider = () => {
   };
   return (
     <>
-      <div className="container mx-auto px-4">
+      <div className="lg:container lg:mx-auto lg:px-4 md:px-2">
         <Slider {...settings}>
           {entertainmentImage.map((img) => {
             return <EntertainmentCard src={img} />;

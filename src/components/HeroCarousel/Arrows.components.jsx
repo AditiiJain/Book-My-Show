@@ -13,8 +13,7 @@ export const NextArrow = (props) => {
           borderBottomLeftRadius: 5,
         }}
         onClick={props.onClick}
-      >
-      </div>
+      />
     </>
   );
 };
@@ -31,9 +30,7 @@ export const PrevArrow = (props) => {
           borderBottomRightRadius: 5,
         }}
         onClick={props.onClick}
-      >
-        {/* <BsChevronRight/> */}
-      </div>
+      />
     </>
   );
 };

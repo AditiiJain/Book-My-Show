@@ -6,7 +6,12 @@ import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCa
 const HomePage = () => {
   return (
     <>
-      <EntertainmentCardSlider />
+      <div className="lg:container lg:mx-auto lg:px-4">
+        <h2 className="font-bold text-gray-800 text-2xl p-6">
+          The Best of Entertainment{" "}
+        </h2>
+        <EntertainmentCardSlider />
+      </div>
     </>
   );
 };
