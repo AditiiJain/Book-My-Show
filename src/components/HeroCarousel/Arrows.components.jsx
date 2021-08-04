@@ -8,8 +8,8 @@ export const NextArrow = (props) => {
         className={props.className}
         style={{
           ...props.style,
-          backgroundColor: "rgba(0,0,0,0.8) ",
-          padding: "30px",
+          backgroundColor: "rgba(0,0,0,0.6) ",
+          padding: "24px",
           borderTopLeftRadius: 5,
           borderBottomLeftRadius: 5,
         }}
@@ -25,8 +25,8 @@ export const PrevArrow = (props) => {
         className={props.className}
         style={{
           ...props.style,
-          backgroundColor: "rgba(0,0,0,0.8) ",
-          padding: "30px",
+          backgroundColor: "rgba(0,0,0,0.6) ",
+          padding: "24px",
           borderTopRightRadius: 5,
           borderBottomRightRadius: 5,
         }}

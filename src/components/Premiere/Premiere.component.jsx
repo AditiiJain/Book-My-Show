@@ -1,8 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
+import { BiChevronRight } from "react-icons/bi";
 
 //components
-import Poster from "../Poster/Poster.component"
+import Poster from "../Poster/Poster.component";
 
 const Premiere = () => {
   const settings = {
@@ -75,9 +76,19 @@ const Premiere = () => {
   ];
   return (
     <>
+      <div className="flex justify-between">
+        <div className="flex flex-col items-start pl-4 pb-3">
+          <h3 className="font-bold text-2xl text-white">Premieres</h3>
+          <p className="text-sm text-white">Brand new releases every friday</p>
+        </div>
+        <div className="flex justify-center items-center text-navbar-800 text-sm pr-3">
+          <p>See All</p>
+          <BiChevronRight />
+        </div>
+      </div>
       <Slider {...settings}>
         {premiereImages.map((img) => {
-         return <Poster {...img} />;
+          return <Poster {...img} isDark />;
         })}
       </Slider>
     </>
