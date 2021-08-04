@@ -52,6 +52,7 @@ const EntertainmentCardSlider = () => {
     slidesToShow: 5,
     slidesToScroll: 5,
     initialSlide: 0,
+
     responsive: [
       {
         breakpoints: 1024,
@@ -73,7 +74,7 @@ const EntertainmentCardSlider = () => {
   };
   return (
     <>
-      <div className="hidden md:block lg:container lg:mx-auto lg:px-4 md:px-2">
+      <div className="hidden md:block lg:container lg:mx-auto lg:px-4 ">
         <Slider {...settingsLG}>
           {entertainmentImage.map((img) => {
             return <EntertainmentCard src={img} />;

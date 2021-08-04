@@ -14,7 +14,7 @@ const PosterSlider = (props) => {
       <div className="flex justify-between">
         <div className="flex flex-col items-start pl-4 pb-3">
           <h3
-            className={`text-2xl font-bold ${
+            className={`text-md md:text-lg md:text-xl lg:text-2xl font-bold ${
               props.isDark ? "text-white" : "text-gray-700"
             }`}
           >
