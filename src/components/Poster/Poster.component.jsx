@@ -6,7 +6,7 @@ const Poster = (props) => {
         <div className="h-48 md:h-60 lg:h-80">
           {/*we are not considering width as it will be adjust by react slick*/}
           <img
-            className="w-full h-full rounded-xl"
+            className="w-full h-full rounded-md md:rounded-xl"
             src={props.src}
             alt={props.title}
           />
