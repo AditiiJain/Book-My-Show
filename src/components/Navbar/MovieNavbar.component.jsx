@@ -2,7 +2,8 @@ import React from "react";
 import { BiChevronRight, BiSearch, BiShareAlt } from "react-icons/bi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoIosMenu } from "react-icons/io";
-
+import {Nav2Lg} from "./Navbar2.component"
+ 
 const NavSm = () => {
   return (
     <>
@@ -108,9 +109,11 @@ const MovieNavbar = () => {
         <div className="hidden lg:flex lg:flex-col 2xl:hidden">
           {/*large screen*/}
           <NavLg />
+          <Nav2Lg className="bg-gray-800"/>
         </div>
-        <div className="hidden 2xl:flex ">
+        <div className="hidden 2xl:block">
           <NavXl />
+          <Nav2Lg className="bg-gray-800"/>
         </div>
       </nav>
     </>

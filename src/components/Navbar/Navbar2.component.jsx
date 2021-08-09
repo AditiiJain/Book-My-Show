@@ -71,7 +71,7 @@ const Nav2Sm = () => {
   );
 };
 
-const Nav2Lg = () => {
+export const Nav2Lg = () => {
   return (
     <>
       <div className="container mx-auto 2xl:px-32 py-2 font-normal flex items-center justify-between lg:px-16">
@@ -114,7 +114,7 @@ const Nav2Lg = () => {
   );
 };
 
-const NavBar2 = () => {
+ const NavBar2 = () => {
   return (
     <>
       <nav className="bg-white lg:bg-gray-800 overflow-x-auto">
