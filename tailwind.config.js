@@ -11,7 +11,7 @@ module.exports = {
           200: "#bfbfbf",
           300: "#a6a6a6",
           400: "#8c8c8c",
-          500: "#737373",
+          500: "#fff3d2", //offer bg
           600: "#f5f5f5",//homepage bg
           700: "#2b3149", //premiere bg
           800: "#f84464", //button
