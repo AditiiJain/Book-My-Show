@@ -30,7 +30,7 @@ const PlaysNavbar = () => {
   };
   return (
     <>
-      <nav className="bg-navbar-900">
+      <nav className="bg-navbar-900 overflow-x-hidden">
         <div className="lg:hidden">
           <NavSm />
         </div>

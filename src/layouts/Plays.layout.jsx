@@ -8,7 +8,7 @@ const PlaysLayout = (props) => {
   return (
     <>
        <PlaysNavbar/>
-       <div className="p-4 lg:p-0">
+       <div className="p-4 pb-0 lg:p-0">
        <HeroCarousel/>
        </div>
       {props.children}
