@@ -4,7 +4,7 @@ const PlaysPoster = (props) => {
   return (
     <>
       <div className="flex flex-col items-start px-1 md:px-3 mb-8">
-        <div className="h-68 w-full md:h-60 lg:h-80">
+        <div className="h-68 w-full md:h-68 lg:h-72">
           <img
             className="w-full h-full rounded-md md:rounded-xl"
             src={props.src}

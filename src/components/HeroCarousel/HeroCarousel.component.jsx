@@ -14,7 +14,7 @@ const HeroCarousel = () => {
     arrows: true,
     autoplay:true,
     centerMode: true,
-    centerPadding: "370px",
+    centerPadding: "338px",
     dots: true,
     infinite: true,
     speed: 500,
