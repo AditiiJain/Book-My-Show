@@ -58,7 +58,7 @@ const NavMd = () => {
   );
 };
 
-const NavLg = () => {
+export const NavLg = () => {
   return (
     <>
       <div className="container mx-auto px-16 py-2 flex items-center justify-between">
@@ -139,7 +139,6 @@ const Navbar = () => {
         <div className="md:hidden">
           {/*mobile screen*/}
           <NavSm />
-          {/* <NavBar2SM/> */}
         </div>
         <div className="hidden md:flex lg:hidden">
           {/*medium tablet screen*/}
