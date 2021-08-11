@@ -22,10 +22,11 @@ const CastAndCrewSlider = () => {
         settings: {
           arrows: true,
           centerMode: true,
+
           centerPadding: "100px",
           slidesToShow: 4,
           slidesToScroll: 3,
-          infinite:true,
+          infinite: true,
         },
       },
       {
@@ -41,8 +42,8 @@ const CastAndCrewSlider = () => {
         breakpoint: 480,
         settings: {
           arrows: false,
-          centerMode:true,
-          centerPadding:"15px",
+          //   centerMode:true,
+          centerPadding: "15px",
           slidesToShow: 3,
           slidesToScroll: 1,
         },

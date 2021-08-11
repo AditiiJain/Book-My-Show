@@ -9,6 +9,7 @@ import Poster from "../Poster/Poster.component";
 import PosterCarouselSettings from "../../configs/PosterCarousel.component";
 
 const PosterSlider = (props) => {
+  const config = props.config ? props.config : PosterCarouselSettings;
   return (
     <>
       <div className="flex justify-between">
@@ -33,7 +34,7 @@ const PosterSlider = (props) => {
           <BiChevronRight />
         </div>
       </div>
-      <Slider {...PosterCarouselSettings}>
+      <Slider {...config}>
         {props.images.map((img) => {
           return <Poster {...img} isDark={props.isDark} />;
         })}
