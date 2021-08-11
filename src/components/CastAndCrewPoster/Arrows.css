@@ -1,0 +1,5 @@
+.CastAndCrew > .slick-prev:before,
+.CastAndCrew > .slick-next:before {
+  color: black;
+  font-size: 25px;
+}

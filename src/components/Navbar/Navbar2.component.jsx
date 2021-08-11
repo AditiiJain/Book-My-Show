@@ -41,8 +41,8 @@ const Nav2Md = () => {
 const Nav2Sm = () => {
   return (
     <>
-      <div className="flex bg-white justify-around">
-        <div className="w-20 h-20 p-6 flex flex-col items-center justify-center ">
+      <div className="flex bg-white justify-around " style={{overflowX:"scroll"}}>
+        <div className="w-20 h-20 p-6 flex flex-col items-center justify-center">
           <img src={Img3} alt="" />
           <p className="text-xs">Movies</p>
         </div>
@@ -117,8 +117,8 @@ export const Nav2Lg = () => {
  const NavBar2 = () => {
   return (
     <>
-      <nav className="bg-white lg:bg-gray-800 overflow-x-auto">
-        <div className="md:hidden ">
+      <nav className="bg-white lg:bg-gray-800">
+        <div className="md:hidden "> 
           {/*mobile screen*/}
           <Nav2Sm />
         </div>

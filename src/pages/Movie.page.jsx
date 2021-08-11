@@ -3,6 +3,8 @@ import { FaCcAmazonPay } from "react-icons/fa";
 
 //components
 import MovieHero from "../components/MovieHero/MovieHero.component";
+// import CastPoster from "../components/CastAndCrewPoster/CastAndCrewPoster.component";
+import CastAndCrewSlider from "../components/CastAndCrewPoster/CastAndCrewSlider.component";
 
 const MoviePage = () => {
   return (
@@ -54,6 +56,18 @@ const MoviePage = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="mt-7">
+          <hr />
+        </div>
+        <div className="my-8">
+          <h1 className="mb-3 font-bold text-2xl">Cast</h1>
+          {/* <CastPoster
+            image="https://in.bmscdn.com/iedb/artist/images/website/poster/large/jason-momoa-25617-24-03-2017-17-39-52.jpg"
+            title="Ben Afflek"
+            role="Batman"
+          /> */}
+         <CastAndCrewSlider/>
         </div>
       </div>
     </>
