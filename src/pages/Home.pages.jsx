@@ -1,34 +1,33 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import TempImages from "../configs/TempImages.config"
 
 //components
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 
-//configs
-import TempImages from "../configs/TempImages.config";
-
 const HomePage = () => {
   const [premiereMovies, setPremiereMovies] = useState([]);
-  // const [recommendedMovies, setrecommendedMovies] = useState([]);
+  const [recommendedMovies, setrecommendedMovies] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
 
   useEffect(() => {
-    const requestUpcomingMoviesImages = async () => {
+    const requestPremiereMoviesImages = async () => {
       const getImages = await axios.get("/movie/upcoming");
       setPremiereMovies(getImages.data.results);
     };
-    requestUpcomingMoviesImages();
+    requestPremiereMoviesImages();
   }, []);
 
-  // useEffect(() => {
-  //   const requestRecommendedMoviesImages = async () => {
-  //     const getImages = await axios.get(`/movie/${movie_id}/recommendations`);
-  //     setPremiereMovies(getImages.data.results);
-  //   };
-  //   requestUpcomingMoviesImages();
-  // }, []);
+  useEffect(() => {
+    const requestRecommendedMoviesImages = async () => {
+      const movie_id ="459151";
+      const getImages = await axios.get(`/movie/${movie_id}/recommendations`);
+      setrecommendedMovies(getImages.data.results);
+    };
+    requestRecommendedMoviesImages();
+  }, []);
 
   useEffect(() => {
     const requestPopularMoviesImages = async () => {
@@ -49,15 +48,15 @@ const HomePage = () => {
   return (
     <>
       <div className="flex flex-col gap-16 bg-navbar-600">
-        {/* <div>
+        <div>
           <div className="mx-4 lg:container lg:mx-auto 2xl:px-36 pt-8 sm:mx-10">
             <PosterSlider
-              images={TempImages}
+              images={recommendedMovies}
               title="Recommended Movies"
               isDark={false}
             />
           </div>
-        </div> */}
+        </div>
 
         <div className="mx-4 lg:container lg:mx-auto sm:mx-10 2xl:px-36">
           <img

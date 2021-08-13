@@ -6,7 +6,8 @@ import CastPoster from "./CastAndCrewPoster.component";
 import { NextArrow, PrevArrow } from "./ArrowsCast.component";
 import "./Arrows.css";
 
-const CastAndCrewSlider = () => {
+const CastAndCrewSlider = (props) => {
+
   const settings = {
     arrows: true,
     infinite: false,
@@ -157,7 +158,7 @@ const CastAndCrewSlider = () => {
   return (
     <>
       <Slider className="CastAndCrew" {...settings}>
-        {temp.map((img) => {
+        {props.images.map((img) => {
           return <CastPoster {...img} />;
         })}
       </Slider>

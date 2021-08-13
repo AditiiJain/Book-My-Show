@@ -1,20 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+
+//components
+import PaymentModal from "../PaymentModal/PaymentModal.component";
 
 //context
 import { MovieContext } from "../../context/movie.context";
 
 const MovieInfo = () => {
-const {movie} = useContext(MovieContext);
+  const { movie } = useContext(MovieContext);
 
-// Naive approach
-// const genres = movie.genres && movie.genres.map(({name})=>name).join(", ")
+  const [isOpen, setIsOpen] = useState(false);
+  const [price, setPrice] = useState(0);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
-//optional chaining
-const genres = movie.genres?.map(({name})=> name).join(", ")
+  const rentMovies = () => {
+    setIsOpen(true);
+    setPrice(149);
+    setTitle("Rent");
+    setDescription(
+      "You can rent this movie for 30 days but will have 2 days to watch it once you start playback ( available for download ) "
+    );
+  };
+  const buyMovies = () => {
+    setIsOpen(true);
+    setPrice(999);
+    setTitle("Buy");
+    setDescription(
+      "Watch the movie any time after purchasing it (available for download)"
+    );
+  };
 
+  // Naive approach
+  // const genres = movie.genres && movie.genres.map(({name})=>name).join(", ")
 
+  //optional chaining
+  const genres = movie.genres?.map(({ name }) => name).join(", ");
   return (
     <>
+      <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} title={title} description={description}/>
       <div className="flex flex-col gap-3 lg:gap-8">
         <div className="flex items-center gap-3 md:px-4">
           <div className="w-36 h-6">
@@ -34,22 +58,32 @@ const genres = movie.genres?.map(({name})=> name).join(", ")
         <div className="flex flex-col-reverse lg:flex-col gap-3 lg:gap-5">
           <div className="text-white flex flex-col gap-3 md:px-4">
             <h4 className="text-gray-300">
-              {movie.original_language === "en" ? "English" : movie.original_language} &bull; Languages:
+              {movie.original_language === "en"
+                ? "English"
+                : movie.original_language}{" "}
+              &bull; Languages:
               <span className="text-navbar-800 font-semibold">
                 Audio(1), Subtitles(1)
               </span>
             </h4>
             <h4>
-              {(movie.runtime/60).toFixed(2)} h &bull; {genres} &bull; {movie.vote_count}+ &bull; {movie.release_date}
+              {(movie.runtime / 60).toFixed(2)} h &bull; {genres} &bull;{" "}
+              {movie.vote_count}+ &bull; {movie.release_date}
             </h4>
           </div>
 
           <div className="text-white flex items-center gap-3 lg:w-full md:w-screen md:px-4">
-            <button className="w-full py-3 font-semibold rounded-lg bg-navbar-800">
+            <button
+              className="w-full py-3 font-semibold rounded-lg bg-navbar-800"
+              onClick={rentMovies}
+            >
               Rent ₹149
             </button>
-            <button className="w-full py-3 font-semibold rounded-lg bg-navbar-800">
-              Buy ₹149
+            <button
+              className="w-full py-3 font-semibold rounded-lg bg-navbar-800"
+              onClick={buyMovies}
+            >
+              Buy ₹999
             </button>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BiChevronRight, BiSearch, BiShareAlt } from "react-icons/bi";
+import { BiSearch, BiShareAlt } from "react-icons/bi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoIosMenu } from "react-icons/io";
 
@@ -10,12 +10,14 @@ import { MovieContext } from "../../context/movie.context";
 import { Nav2Lg } from "./Navbar2.component";
 
 const NavSm = () => {
-  const {movie}=useContext(MovieContext);
+  const { movie } = useContext(MovieContext);
   return (
     <>
       <div className="flex justify-between items-center px-4 py-2">
         <div>
-          <h3 className="text-white text-xl font-bold">{movie.original_title}</h3>
+          <h3 className="text-white text-xl font-bold">
+            {movie.original_title}
+          </h3>
         </div>
         <div className="w-6 h-6 text-white">
           <BiShareAlt className="w-full h-full" />
