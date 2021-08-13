@@ -5,6 +5,9 @@ import { BiChevronRight } from "react-icons/bi";
 //components
 import Poster from "../Poster/Poster.component";
 
+//styles
+import "./PosterSlider.css"
+
 //configs
 import PosterCarouselSettings from "../../configs/PosterCarousel.component";
 
@@ -34,7 +37,7 @@ const PosterSlider = (props) => {
           <BiChevronRight />
         </div>
       </div>
-      <Slider {...config}>
+      <Slider {...config} className="poster-slider">
         {props.images.map((img) => {
           return <Poster {...img} isDark={props.isDark} />;
         })}

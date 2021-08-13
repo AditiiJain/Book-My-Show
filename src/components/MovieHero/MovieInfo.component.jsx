@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+
+//context
+import { MovieContext } from "../../context/movie.context";
 
 const MovieInfo = () => {
+const {movie} = useContext(MovieContext);
+
+// Naive approach
+// const genres = movie.genres && movie.genres.map(({name})=>name).join(", ")
+
+//optional chaining
+const genres = movie.genres?.map(({name})=> name).join(", ")
+
+
   return (
     <>
       <div className="flex flex-col gap-3 lg:gap-8">
@@ -17,18 +29,18 @@ const MovieInfo = () => {
           </span>
         </div>
         <h1 className="text-white lg:text-5xl font-bold hidden lg:block md:px-4">
-          Justice League
+          {movie.original_title}
         </h1>
         <div className="flex flex-col-reverse lg:flex-col gap-3 lg:gap-5">
           <div className="text-white flex flex-col gap-3 md:px-4">
             <h4 className="text-gray-300">
-              English &bull; Languages:{" "}
+              {movie.original_language === "en" ? "English" : movie.original_language} &bull; Languages:
               <span className="text-navbar-800 font-semibold">
                 Audio(1), Subtitles(1)
               </span>
             </h4>
             <h4>
-              1h 49m &bull; Biography, Drama &bull; 13+ &bull; 24 Jul,2021
+              {(movie.runtime/60).toFixed(2)} h &bull; {genres} &bull; {movie.vote_count}+ &bull; {movie.release_date}
             </h4>
           </div>
 

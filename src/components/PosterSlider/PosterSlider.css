@@ -1,0 +1,5 @@
+.poster-slider > .slick-prev:before,
+.poster-slider > .slick-next:before {
+  color: black;
+  font-size: 25px;
+}

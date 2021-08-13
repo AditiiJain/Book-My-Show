@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 
 //components
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.component";
@@ -8,10 +9,47 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import TempImages from "../configs/TempImages.config";
 
 const HomePage = () => {
+  const [premiereMovies, setPremiereMovies] = useState([]);
+  // const [recommendedMovies, setrecommendedMovies] = useState([]);
+  const [popularMovies, setPopularMovies] = useState([]);
+  const [topRatedMovies, setTopRatedMovies] = useState([]);
+
+  useEffect(() => {
+    const requestUpcomingMoviesImages = async () => {
+      const getImages = await axios.get("/movie/upcoming");
+      setPremiereMovies(getImages.data.results);
+    };
+    requestUpcomingMoviesImages();
+  }, []);
+
+  // useEffect(() => {
+  //   const requestRecommendedMoviesImages = async () => {
+  //     const getImages = await axios.get(`/movie/${movie_id}/recommendations`);
+  //     setPremiereMovies(getImages.data.results);
+  //   };
+  //   requestUpcomingMoviesImages();
+  // }, []);
+
+  useEffect(() => {
+    const requestPopularMoviesImages = async () => {
+      const getImages = await axios.get("/movie/popular");
+      setPopularMovies(getImages.data.results);
+    };
+    requestPopularMoviesImages();
+  }, []);
+
+  useEffect(() => {
+    const requestTopRatedMoviesImages = async () => {
+      const getImages = await axios.get("/movie/top_rated");
+      setTopRatedMovies(getImages.data.results);
+    };
+    requestTopRatedMoviesImages();
+  }, []);
+
   return (
     <>
       <div className="flex flex-col gap-16 bg-navbar-600">
-        <div>
+        {/* <div>
           <div className="mx-4 lg:container lg:mx-auto 2xl:px-36 pt-8 sm:mx-10">
             <PosterSlider
               images={TempImages}
@@ -19,7 +57,7 @@ const HomePage = () => {
               isDark={false}
             />
           </div>
-        </div>
+        </div> */}
 
         <div className="mx-4 lg:container lg:mx-auto sm:mx-10 2xl:px-36">
           <img
@@ -48,7 +86,7 @@ const HomePage = () => {
               />
             </div>
             <PosterSlider
-              images={TempImages}
+              images={premiereMovies}
               title="Premieres"
               subtitle="Brand new releases every friday"
               isDark={true}
@@ -59,7 +97,7 @@ const HomePage = () => {
         <div>
           <div className="lg:container lg:mx-auto mx-4 sm:mx-10 2xl:px-36 ">
             <PosterSlider
-              images={TempImages}
+              images={popularMovies}
               title="Online Streaming Events"
               isDark={false}
             />
@@ -69,14 +107,14 @@ const HomePage = () => {
         <div>
           <div className="lg:container lg:mx-auto sm:mx-10 2xl:px-36 mx-4">
             <PosterSlider
-              images={TempImages}
+              images={topRatedMovies}
               title="Outdoor Events"
               isDark={false}
             />
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <div className="lg:container lg:mx-auto mx-4 sm:mx-10  2xl:px-36">
             <PosterSlider
               images={TempImages}
@@ -84,9 +122,9 @@ const HomePage = () => {
               isDark={false}
             />
           </div>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <div className="lg:container lg:mx-auto mx-4 sm:mx-10  2xl:px-36">
             <PosterSlider
               images={TempImages}
@@ -94,9 +132,9 @@ const HomePage = () => {
               isDark={false}
             />
           </div>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <div className="lg:container lg:mx-auto mx-4 sm:mx-10  2xl:px-36">
             <PosterSlider
               images={TempImages}
@@ -104,7 +142,7 @@ const HomePage = () => {
               isDark={false}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

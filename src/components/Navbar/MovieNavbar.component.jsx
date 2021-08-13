@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BiChevronRight, BiSearch, BiShareAlt } from "react-icons/bi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoIosMenu } from "react-icons/io";
-import {Nav2Lg} from "./Navbar2.component"
- 
+
+//context
+import { MovieContext } from "../../context/movie.context";
+
+//component
+import { Nav2Lg } from "./Navbar2.component";
+
 const NavSm = () => {
+  const {movie}=useContext(MovieContext);
   return (
     <>
       <div className="flex justify-between items-center px-4 py-2">
         <div>
-          <h3 className="text-white text-xl font-bold">It All Starts Here!</h3>
+          <h3 className="text-white text-xl font-bold">{movie.original_title}</h3>
         </div>
         <div className="w-6 h-6 text-white">
           <BiShareAlt className="w-full h-full" />
@@ -109,11 +115,11 @@ const MovieNavbar = () => {
         <div className="hidden lg:flex lg:flex-col 2xl:hidden">
           {/*large screen*/}
           <NavLg />
-          <Nav2Lg className="bg-gray-800"/>
+          <Nav2Lg className="bg-gray-800" />
         </div>
         <div className="hidden 2xl:block">
           <NavXl />
-          <Nav2Lg className="bg-gray-800"/>
+          <Nav2Lg className="bg-gray-800" />
         </div>
       </nav>
     </>

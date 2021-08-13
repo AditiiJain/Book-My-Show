@@ -1,5 +1,5 @@
 const Settings = {
-    arrows:false,
+    arrows:true,
     infinite: false,
     speed: 500,
     slidesToShow: 5,
@@ -9,6 +9,7 @@ const Settings = {
       {
         breakpoint: 1024,
         settings: {
+          arrows:false,
           slidesToShow: 5,
           slidesToScroll: 3,
           infinite: true,
