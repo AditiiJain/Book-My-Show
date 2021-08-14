@@ -11,7 +11,9 @@ const PlaysPage = () => {
         <div className="lg:container lg:mx-auto px-4 xl:container xl:mx-auto 2xl:px-28 overflow-x-hidden ">
           <div className="w-full lg:flex lg:flex-row-reverse gap-7">
             <div className="lg:w-3/4">
-              <h2 className="hidden lg:block text-2xl mt-16 font-bold text-gray-800">Plays in Delhi</h2>
+              <h2 className="hidden lg:block text-2xl mt-16 font-bold text-gray-800">
+                Plays in Delhi
+              </h2>
               <div className="mt-5 mb-7 ">
                 <span
                   className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white"
@@ -152,13 +154,33 @@ const PlaysPage = () => {
               </div>
             </div>
             <div className="hidden lg:block lg:w-1/4">
-            <h2 className="hidden lg:block text-2xl mt-16 font-bold text-gray-800 mb-5">Filters</h2>
-                <PlaysFilters title="Date" tags={["Today","Tomorrow","This Weekend"]}/>
-                <PlaysFilters title="Date" tags={["Today","Tomorrow","This Weekend"]}/>
-                <PlaysFilters title="Date" tags={["Today","Tomorrow","This Weekend"]}/>
-                <PlaysFilters title="Date" tags={["Today","Tomorrow","This Weekend"]}/>
-                <PlaysFilters title="Date" tags={["Today","Tomorrow","This Weekend"]}/>
-                <PlaysFilters title="Date" tags={["Today","Tomorrow","This Weekend"]}/>
+              <h2 className="hidden lg:block text-2xl mt-16 font-bold text-gray-800 mb-5">
+                Filters
+              </h2>
+              <PlaysFilters
+                title="Date"
+                tags={["Today", "Tomorrow", "This Weekend"]}
+              />
+              <PlaysFilters
+                title="Date"
+                tags={["Today", "Tomorrow", "This Weekend"]}
+              />
+              <PlaysFilters
+                title="Date"
+                tags={["Today", "Tomorrow", "This Weekend"]}
+              />
+              <PlaysFilters
+                title="Date"
+                tags={["Today", "Tomorrow", "This Weekend"]}
+              />
+              <PlaysFilters
+                title="Date"
+                tags={["Today", "Tomorrow", "This Weekend"]}
+              />
+              <PlaysFilters
+                title="Date"
+                tags={["Today", "Tomorrow", "This Weekend"]}
+              />
             </div>
           </div>
         </div>

@@ -6,6 +6,8 @@ import Img4 from "./images/plays.png";
 import Img5 from "./images/sports.png";
 import Img6 from "./images/stream.png";
 
+import { Link } from "react-router-dom";
+
 const Nav2Md = () => {
   return (
     <>
@@ -22,14 +24,17 @@ const Nav2Md = () => {
           <img src={Img2} alt="" className="w-7/12 h-7/12" />
           <p>Events</p>
         </div>
-        <div className="w-28 h-28 flex flex-col justify-center items-center">
-          <img src={Img4} alt="" className="w-7/12 h-7/12" />
-          <p>Plays</p>
-        </div>
+        <Link to="/plays">
+          <div className="w-28 h-28 flex flex-col justify-center items-center">
+            <img src={Img4} alt="" className="w-7/12 h-7/12" />
+            <p>Plays</p>
+          </div>
+        </Link>
         <div className="w-28 h-28 flex flex-col justify-center items-center">
           <img src={Img5} alt="" className="w-7/12 h-7/12" />
           <p>Sports</p>
         </div>
+
         <div className="w-28 h-28 flex flex-col justify-center items-center">
           <img src={Img1} alt="" className="w-7/12 h-7/12" />
           <p>Activities</p>
@@ -41,7 +46,10 @@ const Nav2Md = () => {
 const Nav2Sm = () => {
   return (
     <>
-      <div className="flex bg-white justify-around " style={{overflowX:"scroll"}}>
+      <div
+        className="flex bg-white justify-around "
+        style={{ overflowX: "scroll" }}
+      >
         <div className="w-20 h-20 p-6 flex flex-col items-center justify-center">
           <img src={Img3} alt="" />
           <p className="text-xs">Movies</p>
@@ -54,10 +62,12 @@ const Nav2Sm = () => {
           <img src={Img2} alt="" />
           <p className="text-xs">Events</p>
         </div>
-        <div className="w-20 h-20 p-6 flex flex-col items-center justify-center">
-          <img src={Img4} alt="" />
-          <p className="text-xs">Plays</p>
-        </div>
+        <Link to="/plays">
+          <div className="w-20 h-20 p-6 flex flex-col items-center justify-center">
+            <img src={Img4} alt="" />
+            <p className="text-xs">Plays</p>
+          </div>
+        </Link>
         <div className="w-20 h-20 p-6 flex flex-col items-center justify-center">
           <img src={Img5} alt="" />
           <p className="text-xs">Sports</p>
@@ -85,9 +95,11 @@ export const Nav2Lg = () => {
           <a href="#" className="px-3">
             Events
           </a>
-          <a href="#" className="px-3">
-            Plays
-          </a>
+          <Link to="/plays">
+            <a href="#" className="px-3">
+              Plays
+            </a>
+          </Link>
           <a href="#" className="px-3">
             Activities
           </a>
@@ -114,11 +126,11 @@ export const Nav2Lg = () => {
   );
 };
 
- const NavBar2 = () => {
+const NavBar2 = () => {
   return (
     <>
       <nav className="bg-white lg:bg-gray-800">
-        <div className="md:hidden "> 
+        <div className="md:hidden ">
           {/*mobile screen*/}
           <Nav2Sm />
         </div>
