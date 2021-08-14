@@ -14,27 +14,27 @@ const PlaysPage = () => {
               <h2 className="hidden lg:block text-2xl mt-16 font-bold text-gray-800">
                 Plays in Delhi
               </h2>
-              <div className="mt-5 mb-7 ">
+              <div className="mt-2 mb-6 flex flex-wrap">
                 <span
-                  className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white"
+                  className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white mt-3"
                   style={{ color: "#dc3558" }}
                 >
                   Today
                 </span>
                 <span
-                  className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white"
+                  className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white mt-3"
                   style={{ color: "#dc3558" }}
                 >
                   Tomorrow
                 </span>
                 <span
-                  className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white"
+                  className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white mt-3"
                   style={{ color: "#dc3558" }}
                 >
                   This Weekend
                 </span>
                 <span
-                  className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white"
+                  className="border border-gray-400 p-2 rounded-3xl text-xs mr-4 lg:bg-white mt-3"
                   style={{ color: "#dc3558" }}
                 >
                   Theatre

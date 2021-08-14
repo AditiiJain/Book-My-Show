@@ -7,35 +7,30 @@ import { MovieContext } from "../../context/movie.context";
 import MovieInfo from "./MovieInfo.component";
 
 const MovieHero = () => {
-  const {movie} = useContext(MovieContext)
+  const { movie } = useContext(MovieContext);
   return (
- 
-     <>
+    <>
       <div>
-        <div className="relative md:hidden" style={{ height: "calc(170vw)" }}>
+        <div className="relative h-screen md:hidden">
           {/* Mobile*/}
-          <div className="absolute bottom-8 left-4 z-50">
-              <MovieInfo/>
+          <div className="absolute bottom-2 left-4 z-50">
+            <MovieInfo />
           </div>
           <div className="absolute bottom-0 bg-black opacity-95 z-30 w-full h-56" />
           <img
-            className="w-full h-full"
+            className="w-full h-full object-fill"
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt="poster"
           />
-      
         </div>
-        <div
-          className="relative hidden md:block w-full lg:hidden"
-          style={{ height: "calc(85vw)" }}
-        >
+        <div className="relative hidden md:block md:h-screen w-full lg:hidden ">
           {/* Tablet */}
           <div className="absolute bottom-10 z-50">
-              <MovieInfo/>
+            <MovieInfo />
           </div>
           <div className="absolute bottom-0 bg-black opacity-95 z-30 w-full h-56" />
           <img
-            className="w-full h-full"
+            className="w-full h-full object-cover"
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt="poster"
           />

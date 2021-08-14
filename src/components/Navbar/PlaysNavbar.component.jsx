@@ -1,5 +1,6 @@
 import React from "react";
 import { BiSearch, BiChevronLeft } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 //components
 import { Nav2Lg } from "./Navbar2.component";
@@ -11,9 +12,12 @@ const PlaysNavbar = () => {
       <>
         <div className="flex justify-between items-center px-4 py-2">
           <div className="flex justify-center items-center">
-            <div className="flex text-white justify-center items-center text-4xl font-thin">
-              <BiChevronLeft />
-            </div>
+            <Link to="/">
+              <div className="flex text-white justify-center items-center text-4xl font-thin">
+                <BiChevronLeft />
+              </div>
+            </Link>
+
             <div>
               <h3 className="text-white text-lg font-bold">Plays</h3>
               <span className="flex items-center text-xs text-gray-300">

@@ -7,10 +7,9 @@ import { NextArrow, PrevArrow } from "./ArrowsCast.component";
 import "./Arrows.css";
 
 const CastAndCrewSlider = (props) => {
-
   const settings = {
     arrows: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 4,
@@ -22,9 +21,6 @@ const CastAndCrewSlider = (props) => {
         breakpoint: 1024,
         settings: {
           arrows: true,
-          centerMode: true,
-
-          centerPadding: "100px",
           slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
@@ -34,131 +30,30 @@ const CastAndCrewSlider = (props) => {
         breakpoint: 600,
         settings: {
           arrows: false,
+          infinite:true,
           slidesToShow: 5,
           slidesToScroll: 2,
-          initialSlide: 2,
+          initialSlide:0,
         },
       },
       {
         breakpoint: 480,
         settings: {
           arrows: false,
-          //   centerMode:true,
-          centerPadding: "15px",
+          infinite:true,
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
     ],
   };
-  const temp = [
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-    {
-      image:
-        "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00122511-ansmvxvkql-portrait.jpg",
-      title: "GodZilla vs. Kong",
-      role: "English",
-    },
-  ];
+  // const castAndCrewimages = props.images.reverse();
   return (
+   
     <>
       <Slider className="CastAndCrew" {...settings}>
-        {props.images.map((img) => {
+        {
+        props.images.map((img) => {
           return <CastPoster {...img} />;
         })}
       </Slider>

@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { BiSearch, BiShareAlt } from "react-icons/bi";
+import { BiChevronLeft, BiSearch, BiShareAlt } from "react-icons/bi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoIosMenu } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 //context
 import { MovieContext } from "../../context/movie.context";
@@ -14,7 +15,12 @@ const NavSm = () => {
   return (
     <>
       <div className="flex justify-between items-center px-4 py-2">
-        <div>
+        <div className="flex justify-center items-center">
+          <Link to="/">
+            <div className="text-4xl font-thin">
+              <BiChevronLeft className="text-white" />
+            </div>
+          </Link>
           <h3 className="text-white text-xl font-bold">
             {movie.original_title}
           </h3>
@@ -32,13 +38,15 @@ const NavLg = () => {
     <>
       <div className="container mx-auto px-16 py-2 flex items-center justify-between">
         <div className="flex items-center w-1/2 gap-4">
-          <div className="w-12 h-12">
-            <img
-              className="w-full h-full"
-              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-              alt="logo"
-            />
-          </div>
+          <Link to="/">
+            <div className="w-12 h-12">
+              <img
+                className="w-full h-full"
+                src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+                alt="logo"
+              />
+            </div>
+          </Link>
           <div className="w-full flex bg-white items-center gap-2 px-3 py-1  rounded-sm">
             <BiSearch className="w-5 h-5 text-gray-500" />
             <input
@@ -69,13 +77,15 @@ const NavXl = () => {
     <>
       <div className="container mx-auto px-32 py-2 flex items-center justify-between">
         <div className="flex items-center w-1/2 gap-4">
-          <div className="w-12 h-12">
-            <img
-              className="w-full h-full"
-              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-              alt="logo"
-            />
-          </div>
+          <Link to="/">
+            <div className="w-12 h-12">
+              <img
+                className="w-full h-full"
+                src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+                alt="logo"
+              />
+            </div>
+          </Link>
           <div className="w-full flex bg-white items-center gap-2 px-3 py-1  rounded-sm">
             <BiSearch className="w-5 h-5 text-gray-500" />
             <input

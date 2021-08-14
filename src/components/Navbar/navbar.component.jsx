@@ -2,6 +2,7 @@ import React from "react";
 import { BiChevronRight, BiSearch } from "react-icons/bi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoIosMenu } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const NavSm = () => {
   return (
@@ -26,13 +27,15 @@ const NavMd = () => {
     <>
       <div className="w-full  flex items-center justify-between px-6 py-2">
         <div className="flex items-center w-2/3 gap-4">
-          <div className="w-12 h-12">
-            <img
-              className="w-full h-full"
-              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-              alt="llogo"
-            />
-          </div>
+          <Link to="/">
+            <div className="w-12 h-12">
+              <img
+                className="w-full h-full"
+                src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+                alt="llogo"
+              />
+            </div>
+          </Link>
           <div className="w-full flex bg-white items-center gap-2 px-3 py-1  rounded-sm">
             <BiSearch className="w-5 h-5 text-gray-500" />
             <input
@@ -63,13 +66,15 @@ export const NavLg = () => {
     <>
       <div className="container mx-auto px-16 py-2 flex items-center justify-between">
         <div className="flex items-center w-1/2 gap-4">
-          <div className="w-12 h-12">
-            <img
-              className="w-full h-full"
-              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-              alt="logo"
-            />
-          </div>
+          <Link to="/">
+            <div className="w-12 h-12">
+              <img
+                className="w-full h-full"
+                src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+                alt="logo"
+              />
+            </div>
+          </Link>
           <div className="w-full flex bg-white items-center gap-2 px-3 py-1  rounded-sm">
             <BiSearch className="w-5 h-5 text-gray-500" />
             <input
@@ -95,18 +100,20 @@ export const NavLg = () => {
   );
 };
 
-const NavXl = () =>{
+const NavXl = () => {
   return (
     <>
       <div className="container mx-auto px-32 py-2 flex items-center justify-between">
         <div className="flex items-center w-1/2 gap-4">
-          <div className="w-12 h-12">
-            <img
-              className="w-full h-full"
-              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
-              alt="logo"
-            />
-          </div>
+          <Link to="/">
+            <div className="w-12 h-12">
+              <img
+                className="w-full h-full"
+                src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+                alt="logo"
+              />
+            </div>
+          </Link>
           <div className="w-full flex bg-white items-center gap-2 px-3 py-1  rounded-sm">
             <BiSearch className="w-5 h-5 text-gray-500" />
             <input
@@ -130,7 +137,7 @@ const NavXl = () =>{
       </div>
     </>
   );
-}
+};
 
 const Navbar = () => {
   return (
@@ -149,7 +156,7 @@ const Navbar = () => {
           <NavLg />
         </div>
         <div className="hidden 2xl:flex ">
-          <NavXl/>
+          <NavXl />
         </div>
       </nav>
     </>

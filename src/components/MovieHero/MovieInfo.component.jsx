@@ -39,7 +39,7 @@ const MovieInfo = () => {
   return (
     <>
       <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} title={title} description={description}/>
-      <div className="flex flex-col gap-3 lg:gap-8">
+      <div className="flex flex-col pr-3 lg:px-0 gap-3 lg:gap-8">
         <div className="flex items-center gap-3 md:px-4">
           <div className="w-36 h-6">
             <img
