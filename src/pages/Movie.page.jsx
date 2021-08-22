@@ -8,9 +8,6 @@ import MovieHero from "../components/MovieHero/MovieHero.component";
 import CastAndCrewSlider from "../components/CastAndCrewPoster/CastAndCrewSlider.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 
-//configs
-import TempImages from "../configs/TempImages.config";
-
 //context
 import { MovieContext } from "../context/movie.context";
 

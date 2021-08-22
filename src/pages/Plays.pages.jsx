@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 //components
 import PlaysPoster from "../components/Poster/PlaysPoster.component";
 import PlaysFilters from "../components/PlaysFilters/PlaysFilters.component";
 
 const PlaysPage = () => {
+  const [plays, setPlays] = useState([]);
+
+  useEffect(() => {
+    const requestPlays = async () => {
+      const getPlays = await axios.get("/tv/airing_today");
+      setPlays(getPlays.data.results);
+    };
+    requestPlays();
+  }, []);
+
   return (
     <>
       <div className="lg:bg-navbar-600">
@@ -42,114 +53,18 @@ const PlaysPage = () => {
               </div>
               <div className="flex flex-wrap ">
                 <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3  my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  <PlaysPoster
-                    src="https://in.bmscdn.com/discovery-catalog/events/tr:…15,oy-15,ow-55/et00313464-azyxnpqxnd-portrait.jpg"
-                    title="Digital Theatre"
-                    venue="Book in Zoom"
-                    language="English/Telugu"
-                    money="₹149"
-                    className="w-full"
-                  />
+                  {plays.map((play) => {
+                    return (
+                      <PlaysPoster
+                        src={`https://image.tmdb.org/t/p/original${play.poster_path}`}
+                        title={`${play.original_name}`}
+                        venue="Book in Zoom"
+                        language="English/Telugu"
+                        money="₹149"
+                        className="w-full"
+                      />
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -162,24 +77,24 @@ const PlaysPage = () => {
                 tags={["Today", "Tomorrow", "This Weekend"]}
               />
               <PlaysFilters
-                title="Date"
-                tags={["Today", "Tomorrow", "This Weekend"]}
+                title="Language"
+                tags={["Hindi", "English", "Kannad"]}
               />
               <PlaysFilters
-                title="Date"
-                tags={["Today", "Tomorrow", "This Weekend"]}
+                title="Categories"
+                tags={["Theatre", "Storytelling"]}
               />
               <PlaysFilters
-                title="Date"
-                tags={["Today", "Tomorrow", "This Weekend"]}
+                title="Genres"
+                tags={["Drama", "Comedy", "Historical", "Adaption"]}
               />
               <PlaysFilters
-                title="Date"
-                tags={["Today", "Tomorrow", "This Weekend"]}
+                title="More Filters"
+                tags={["Online Streaming", "Kids Allowed", "Outdoor Events"]}
               />
               <PlaysFilters
-                title="Date"
-                tags={["Today", "Tomorrow", "This Weekend"]}
+                title="Price"
+                tags={["Free", "0-500", "Above 2000"]}
               />
             </div>
           </div>

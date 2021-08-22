@@ -30,30 +30,27 @@ const CastAndCrewSlider = (props) => {
         breakpoint: 600,
         settings: {
           arrows: false,
-          infinite:true,
+          infinite: true,
           slidesToShow: 5,
           slidesToScroll: 2,
-          initialSlide:0,
+          initialSlide: 0,
         },
       },
       {
         breakpoint: 480,
         settings: {
           arrows: false,
-          infinite:true,
+          infinite: true,
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
     ],
   };
-  // const castAndCrewimages = props.images.reverse();
   return (
-   
     <>
       <Slider className="CastAndCrew" {...settings}>
-        {
-        props.images.map((img) => {
+        {props.images.map((img) => {
           return <CastPoster {...img} />;
         })}
       </Slider>

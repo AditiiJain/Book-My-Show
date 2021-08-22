@@ -33,7 +33,7 @@ const PosterSlider = (props) => {
           </p>
         </div>
         <div className="flex justify-center items-center text-navbar-800 text-sm pr-3">
-          <p>See All</p>
+          <p className="cursor-pointer">See All</p>
           <BiChevronRight />
         </div>
       </div>
