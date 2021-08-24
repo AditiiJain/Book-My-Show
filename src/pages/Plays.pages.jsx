@@ -51,10 +51,10 @@ const PlaysPage = () => {
                   Theatre
                 </span>
               </div>
-              <div className="flex flex-wrap ">
-                <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
-                  {plays.map((play) => {
-                    return (
+              <div className="flex flex-wrap">
+                {plays.map((play) => {
+                  return (
+                    <div className="w-1/2 md:w-1/3 my-3 lg:w-3/12">
                       <PlaysPoster
                         src={`https://image.tmdb.org/t/p/original${play.poster_path}`}
                         title={`${play.original_name}`}
@@ -63,9 +63,9 @@ const PlaysPage = () => {
                         money="₹149"
                         className="w-full"
                       />
-                    );
-                  })}
-                </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className="hidden lg:block lg:w-1/4">
